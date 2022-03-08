@@ -1,0 +1,27 @@
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+html{
+    /*overflow: hidden;*/
+    height: 100%;
+}
+body{
+    background-color: #ffffff;
+    /*overflow: auto;*/
+    height: 100%;
+}
+
+/*footer*/
+footer{
+    background-color: rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+footer p{
+    text-align: center; 
+    color: #1a1a1a;
+    font-size: 20px;
+}
