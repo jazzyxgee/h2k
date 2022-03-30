@@ -1,20 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hi! to Kombucha</title>
-    <meta name="description" content=" Jasmine Guevara's website. San Diego based web developer and designer. ">
-    <link href = "css/style.css" rel = "stylesheet" type = "text/css" />
+    <meta name="description" content="Find articles and how-to guides about kombucha, gardening, and healthy foods
+    on Hi! to Kombucha.">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
 
     <meta property="og:title" content="Hi! to Kombucha" />
     <meta property="og:url" content="https://hitokombucha.com/" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/jazzyxgee/hikombucha.github.io/gh-pages/images/bottles-og.jpg" />
+
 </head>
+
 <body>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="container-home">
+
+        <div class ="nav-bar">
+            <div class = "nav-btns">
+                <div class="button_search" id = "open-search" >
+                    <a href="javascript:void(0)" class="openbtn">&#x1F50E;&#xFE0E;</a>
+                </div>
+                <div class="button_container_open" id = "open-button-container" >
+                    <a href="javascript:void(0)" class="openbtn">&#9776;</a>
+                </div>
+            </div>
+            <div class = "icon">
+                <div class = "icon-img">
+                    <img src="../img/logo design 2 transparency.png" width="70px" alt="Picture of Jasmine Guevara">
+                </div>  
+            </div>
+
+            <!-- overlay part-->
+            <div class = "overlay" id ="overlay-menu">
+                <div class='cursor' id="cursor"></div>
+                <div class="button_container" id = "close-button-container" >
+                    <a href="javascript:void(0)" class="closebtn" >X</a>
+                </div>
+                <nav>
+                    <ul class = "links">
+                        <li class = "active"><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                    </ul> 
+                </nav>
+            </div>
+        </div>
+        <section class="slideshow">
+            <div class = "slideshow-display">
+                <div class = "slides">
+                    <div class = "slide-info post1">
+                        <a href="javascript:void(0)">What's Growing in the Garden?</a>
+                    </div>
+                </div>
+                <div class = "slides">
+                    <div class = "slide-info post2">
+                        <a href="javascript:void(0)">What is Kombucha?</a>
+                    </div>
+                </div>
+                <div class = "slides">
+                    <div class = "slide-info post3">
+                        <a href="javascript:void(0)" >Poll: What would you like to learn about?</a>
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div class = "dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+                <!--<img src="https://www.w3schools.com/howto/img_nature_wide.jpg">
+                <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+                <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+                -->
+        </section>
+        <main>Main</main>
+        <section class="blog-roll">Blog Roll</section>
+        <div class = "content1">Content1</div>
+        <div class = "content2">Content2</div>
+        <div class="newsletter">Newsletter</div>
+        <footer>Footer</footer>
+    </div>
+
+
+
+
+
+
+    <!-- need to put in main.js-->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="../js/main.js"></script>
 
 </body>

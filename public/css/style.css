@@ -2,7 +2,7 @@
     box-sizing: 0;
     margin: 0;
     padding:0;
-    font-family: sans-serif;
+    font-family: "Lato", sans-serif;
 }
 html{
     /*overflow: hidden;*/
@@ -13,15 +13,201 @@ body{
     /*overflow: auto;*/
     height: 100%;
 }
+/*nav*/
+.nav-bar {
+    background-color: #ffffff;
+    grid-area: nav;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "o icon nav-btns";
+}
+.openbtn{
+    color:#000;
+    text-decoration: none;
+}
+.openbtn:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+.closebtn{
+    color:#000000;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.closebtn:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+.nav-btns{
+    grid-area: nav-btns;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.button_container_open{
+    font-size: 30px;
+}
+.button_search{
+    font-size: 30px;
+}
+.icon {
+    grid-area: icon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow: hidden; /* Hide scrollbars */
+}
+nav{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 30px;
+}
+/*home*/
+.container-home{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr .5fr 1fr 1fr 0.8fr;
+    grid-template-areas:
+        "nav nav"
+        "slideshow slideshow"
+        "main main"
+        "roll roll"
+        "c1 c2"
+        "newsletter newsletter"
+        "footer footer";
+    
+    grid-gap: 0.2rem;
+}
+/*slideshow*/
+.slideshow{
+    background-color: #ffffff;
+    grid-area: slideshow; 
+}
+.slideshow-display {
+    position: relative;
+    margin: auto;
+}
+.slides{
+    display: none;
+    height:500px;
+}
+.slide-info{
+    height: 100%; /* You must set a specified height */                    
+}
+.slide-info a{
+    position:absolute;                 
+    bottom:30px;
+
+    font-family: "Noticia Text", sans-serif;
+    color:#fff;
+    font-size: 40px;  
+                         
+}
+/*front page post*/
+.post1{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.w3schools.com/howto/img_nature_wide.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.post2{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.hitokombucha.com/images/what-is-kombucha-cover.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.post3{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.hitokombucha.com/images/poll-august.jpg");
+    background-position: center;
+    background-size: cover;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dots{
+    padding-top: 5px; 
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+main{
+    background-color: #f3f3f3;
+    grid-area: main;
+}
+.blog-roll{
+    background-color: #f5f5f5;
+    grid-area: roll;
+}
+.newsletter{
+    background-color: #FFFBDD;
+    grid-area: newsletter;
+}
+.content1{
+    background-color: rgb(175, 238, 194);
+    grid-area: c1;
+}
+.content2{
+    background-color: rgb(64, 224, 144);
+    grid-area: c2;
+}
 
 /*footer*/
 footer{
-    background-color: rgb(255, 255, 255);
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-footer p{
-    text-align: center; 
-    color: #1a1a1a;
-    font-size: 20px;
+    background-color: #cccccc;
+    grid-area: footer;
 }
