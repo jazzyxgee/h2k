@@ -13,6 +13,7 @@ body{
     /*overflow: auto;*/
     height: 100%;
 }
+
 /*nav*/
 .nav-bar {
     background-color: #ffffff;
@@ -76,20 +77,19 @@ nav{
     align-items: center;
     justify-content: center;
 }
-
 .button_container{
-    
     display: flex;
     align-items: center;
     justify-content: right;
     font-size: 30px;
 }
+
 /*home*/
 .container-home{
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr .5fr 1fr 1fr 0.8fr;
+    grid-template-rows: 0.1fr 1.2fr 1.1fr 3.6fr 1fr 0.8fr;
     grid-template-areas:
         "nav nav"
         "slideshow slideshow"
@@ -98,13 +98,13 @@ nav{
         "c1 c2"
         "newsletter newsletter"
         "footer footer";
-    
     grid-gap: 0.2rem;
 }
+
 /*slideshow*/
 .slideshow{
     background-color: #ffffff;
-    grid-area: slideshow; 
+    grid-area: slideshow;
 }
 .slideshow-display {
     position: relative;
@@ -112,10 +112,10 @@ nav{
 }
 .slides{
     display: none;
-    height:500px;
+    height:700px;
 }
 .slide-info{
-    height: 100%; /* You must set a specified height */                    
+    height: 100%; /* You must set a specified height */          
 }
 .slide-info a{
     position:absolute;                 
@@ -123,9 +123,17 @@ nav{
 
     font-family: "Noticia Text", sans-serif;
     color:#fff;
-    font-size: 40px;  
-                         
+    text-decoration: none;
+    font-size: 40px;                          
 }
+.yt-vid{
+    width:560px; 
+    height:315px;
+}
+.slide-info a:hover{
+    text-decoration: underline;  
+}
+
 /*front page post*/
 .post1{
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.w3schools.com/howto/img_nature_wide.jpg");
@@ -150,9 +158,9 @@ nav{
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -171,28 +179,81 @@ nav{
 }
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  
 }
 .active, .dot:hover {
     background-color: #717171;
 }
 
-
+/*main section, intro w/ vid*/
 main{
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     grid-area: main;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
+.main-text {
+    width: 500px;
+}
+.main-text h4{
+    font-size: 22px;
+}
+.main-text p{
+    font-size: 18px;
+}
+
+/*homepage featured posts - by newest*/
 .blog-roll{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     grid-area: roll;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.bl-title-link{
+    font-size: 22px;
+    color:#000;
+    
+    font-family: "Noticia Text", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.br-posts{
+    text-align: center;
+    font-size: 18px;
+}
+.br-text a{
+    color:#000;
+    
+    text-decoration: none;
+}
+.br-posts a:hover{
+    text-decoration: underline;
+}
+
+/*.br-post1{
+    background-color: palevioletred;
+}
+.br-post2{
+    background-color: rgb(194, 100, 131);
+}
+.br-post3{
+    background-color: rgb(161, 87, 112);
+}
+.br-text{
+    text-align: center;
+}*/
+
+/*newsletter sign up*/
 .newsletter{
     background-color: #FFFBDD;
     grid-area: newsletter;
@@ -210,4 +271,10 @@ main{
 footer{
     background-color: #cccccc;
     grid-area: footer;
+}
+
+@media only screen and (max-width :1080px) {
+    main{
+        flex-direction: column;
+    }
 }
