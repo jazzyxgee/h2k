@@ -333,11 +333,20 @@ main{
 #mc_embed_signup{
     width:600px;
 }
+.group-mc{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .sign-up-form{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 200px;
+}
+.mc-form{
+    width: 50%;
 }
 .button-area{
     display: flex;
@@ -376,6 +385,9 @@ footer{
 .footer-info {
     text-align: center;
 }
+.footer-social img:hover{
+    opacity: .6;
+}
 .cc-link{
     color: #000;
     font-style: italic;
@@ -398,5 +410,7 @@ footer{
     main{
         flex-direction: column;
     }
-    
+    #mc_embed_signup{
+        width:70%;
+    }
 }
