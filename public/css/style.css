@@ -429,3 +429,15 @@ footer{
         text-align: center;
     }
 }
+@media only screen and (max-width :430px) {
+    .yt-vid{
+        width:300px; 
+        height:315px;
+    }
+    .br-posts img {
+        width:300px; 
+    }
+    .c2-img img{
+        width: 300px;
+    }
+}
