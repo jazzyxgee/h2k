@@ -24,9 +24,27 @@ body{
     grid-template-areas:
         "o icon nav-btns";
 }
+.links{
+    list-style: none;
+    font-size: 50px;
+    text-align: center;
+}
+.links a{
+    color: #000000;
+    text-decoration: none;
+}
+.active {
+    text-decoration: 5px underline;
+}
+.links a:hover{
+    color:#aaa82e;
+    transition: .9s;
+    font-size:2em;  
+}
 .openbtn{
     color:#000;
     text-decoration: none;
+    padding-right: 10px;
 }
 .openbtn:hover{
     cursor: pointer;
@@ -35,7 +53,8 @@ body{
 .closebtn{
     color:#000000;
     text-decoration: none;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-right: 10px;
 }
 .closebtn:hover {
     cursor: pointer;
@@ -187,7 +206,7 @@ nav{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+.dot:hover {
     background-color: #717171;
 }
 
@@ -393,10 +412,8 @@ footer{
     font-style: italic;
 }
 
-
 @media only screen and (max-width :1080px) {
     .container-home{
-
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.1fr 1.2fr 1.1fr 4fr .3fr .3fr 0.5fr .1fr;
         grid-template-areas:
@@ -437,7 +454,10 @@ footer{
     .br-posts img {
         width:300px; 
     }
+    .c2-img{
+        padding: 10px;
+    }
     .c2-img img{
-        width: 300px;
+        width: 100%;
     }
 }
