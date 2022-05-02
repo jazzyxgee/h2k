@@ -392,6 +392,8 @@ footer{
     color: #000;
     font-style: italic;
 }
+
+
 @media only screen and (max-width :1080px) {
     .container-home{
 
@@ -412,5 +414,18 @@ footer{
     }
     #mc_embed_signup{
         width:70%;
+    }
+}
+@media only screen and (max-width :600px) {
+    .yt-vid{
+        width:400px; 
+        height:315px;
+    }
+    .br-posts img {
+        width:400px; 
+    }
+    .main-text {
+        width: 100%;
+        text-align: center;
     }
 }
