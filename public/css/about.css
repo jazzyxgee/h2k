@@ -1,0 +1,16 @@
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url("../img/drink-food.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+.hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    height: 100%;
+}
+.quote h1 {
+    font-size: 40px;
+}

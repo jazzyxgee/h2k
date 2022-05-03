@@ -19,9 +19,7 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/jazzyxgee/hikombucha.github.io/gh-pages/images/bottles-og.jpg" />
 
 </head>
-
 <body>
-
     <div class="container-home">
         <div class ="nav-bar">
             <div class = "nav-btns">
@@ -71,12 +69,12 @@
                         <a href="javascript:void(0)" >Poll: What would you like to learn about?</a>
                     </div>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+                <a class="prev" id = "prev" >❮</a>
+                <a class="next" id = "next" >❯</a>
                 <div class = "dots" style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span> 
-                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" id = "dot1"></span> 
+                    <span class="dot" id = "dot2"></span> 
+                    <span class="dot" id = "dot3"></span> 
                 </div>
             </div>
 
@@ -147,7 +145,6 @@
             </div>
         </section>
         <div class = "content1">
-
             <div class = "c2-img">
                 <div>
                     <img src="../img/peace-donation.png" width="400px" alt="Peace-heart sign made of the word peace">
@@ -219,37 +216,6 @@
         </footer>
     </div>
 
-    <!-- need to put in main.js-->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("slides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          
-          dots[slideIndex-1].className += " active";
-          
-        }
-    </script>
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="../js/main.js"></script>
 
