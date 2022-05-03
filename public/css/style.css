@@ -91,7 +91,7 @@ body{
     overflow: hidden; /* Hide scrollbars */
 }
 nav{
-    min-height: 80%;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,17 +155,17 @@ nav{
 
 /*front page post*/
 .post1{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.w3schools.com/howto/img_nature_wide.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("../img/may-whats-growing.jpg");
     background-position: center;
     background-size: cover;
 }
 .post2{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.hitokombucha.com/images/what-is-kombucha-cover.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("../img/what-is-kombucha-cover.jpg");
     background-position: center;
     background-size: cover;
 }
 .post3{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("https://www.hitokombucha.com/images/poll-august.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url("../img/poll-cover.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -444,6 +444,12 @@ footer{
     .main-text {
         width: 100%;
         text-align: center;
+    }
+    nav{
+        min-height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media only screen and (max-width :430px) {
