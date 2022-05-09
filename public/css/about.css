@@ -14,3 +14,48 @@
 .quote h1 {
     font-size: 40px;
 }
+
+.about-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: papayawhip;
+    height: 400px;
+}
+.about-us-text{
+    text-align: center;
+    width: 60%;
+}
+.about-us-text h2{
+    font-size: 30px;
+}
+
+.about-team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 760px;
+    background-color: rgb(253, 247, 237);
+}
+.about-team-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 60%;
+    
+}
+.about-team-area h2{
+    font-size: 30px;
+}
+.about-team-area img {
+    border-radius: 50%;
+}
+.about-text{
+    width: 400px;
+}
+.team-bio {
+    text-align: center;
+    width: 70%;
+}
