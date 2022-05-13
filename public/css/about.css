@@ -5,6 +5,7 @@
     height: 600px;
 }
 .hero-text {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,15 +13,20 @@
     height: 100%;
 }
 .quote h1 {
+
     font-size: 40px;
 }
-
 .about-us{
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: papayawhip;
-    height: 400px;
+    background-color: #a3699e;
+    
+    background-image: url("../img/leafy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
 }
 .about-us-text{
     text-align: center;
@@ -36,7 +42,10 @@
     justify-content: center;
     flex-direction: column;
     height: 760px;
-    background-color: rgb(253, 247, 237);
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #d1b4cf;
 }
 .about-team-area{
     display: flex;
@@ -47,15 +56,62 @@
     
 }
 .about-team-area h2{
+    color:#a3699e;
     font-size: 30px;
 }
 .about-team-area img {
     border-radius: 50%;
 }
 .about-text{
+    font-size: 18px;
     width: 400px;
 }
 .team-bio {
+    font-size: 18px;
     text-align: center;
     width: 70%;
+}
+
+@media only screen and (max-width :1080px) {
+    .about-us{
+        background-image: url("../img/leaf-euc.png");
+        background-position:center;
+        height: 700px;
+    }
+    .about-us-text{
+        background: rgba(255, 207, 255, 0.7);
+        text-align: center;
+        width: 60%;
+    }
+    .quote {
+        width: 70%;
+    }
+}
+@media only screen and (max-width :805px) {
+
+    .about-team-area{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        
+    }
+    .about-team{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    
+        background-color: #d1b4cf;
+    }
+    .about-team-area img {
+        border-radius: 50%;
+        width: 200px;
+    }
+    .about-text{
+        width: 100%;
+    }
 }
