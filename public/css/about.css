@@ -12,6 +12,7 @@
     color:#fff;
     height: 100%;
 }
+
 .quote h1 {
 
     font-size: 40px;
@@ -87,7 +88,7 @@
         width: 70%;
     }
 }
-@media only screen and (max-width :805px) {
+@media only screen and (max-width :830px) {
 
     .about-team-area{
         display: flex;
@@ -109,7 +110,7 @@
     }
     .about-team-area img {
         border-radius: 50%;
-        width: 200px;
+        width: 300px;
         padding-top: 15px;
     }
     .about-text{
