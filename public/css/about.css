@@ -110,8 +110,12 @@
     .about-team-area img {
         border-radius: 50%;
         width: 200px;
+        padding-top: 15px;
     }
     .about-text{
         width: 100%;
+    }
+    .team-bio {
+        padding-bottom: 20px;
     }
 }
