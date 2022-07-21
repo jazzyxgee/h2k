@@ -11,6 +11,9 @@ function closeNav() {
     document.getElementById("cursor").style.display = "none";
 }
 
+
+
+
 /**slideshow */
 document.getElementById('prev').addEventListener('click', function () {
     plusSlides(-1);
@@ -61,3 +64,4 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 
 }
+
