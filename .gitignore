@@ -1,4 +1,4 @@
 # misc
 .DS_Store
 .env.local
-dbpool.js
+# dbpool.js
