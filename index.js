@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql");
 
 const app = express();
-const pool = require("./dbPool.js");
+const pool = require("./dbpool.js");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
