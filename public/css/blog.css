@@ -104,7 +104,9 @@
 
 }
 @media only screen and (max-width :700px) {
-
+    .search-input{
+        width:90px;
+    }
     .b-text{
         width: 300px;
     }
