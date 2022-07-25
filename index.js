@@ -20,7 +20,7 @@ app.get('/post', (req, res) =>  {
 })*/
 app.get('/blog', async (req, res) =>  {
     
-    let sql = `SELECT postId, title, user, category, date
+    let sql = `SELECT postId, title, user, category, date, himg, vimg
                 FROM blog_posts`;
     let rows = await executeSQL(sql);
 
@@ -32,7 +32,7 @@ app.get('/searchByKeyword', async (req, res) => {
     let userKeyword = req.query.keyword;
     console.log(userKeyword);
   
-    let sql = `SELECT postId, title, user, category, date
+    let sql = `SELECT postId, title, user, category, date, vimg
               FROM blog_posts
               WHERE title LIKE ? `;
   
@@ -58,7 +58,7 @@ app.get('/searchByCategory', async (req, res) => {
     let userCategory = req.query.category;
     console.log(userCategory);
   
-    let sql = `SELECT postId, title, user, category, date
+    let sql = `SELECT postId, title, user, category, date, vimg
               FROM blog_posts
               WHERE category LIKE ? `;
   
