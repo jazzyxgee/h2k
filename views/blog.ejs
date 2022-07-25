@@ -56,7 +56,7 @@
         </div>
         <div class = "blog-heading">
             <div class = "b-text">
-                <h1>H2K Blog</h1>
+                <h1><a class = "h1-link"href="/blog" >H2K Blog</a></h1>
                 <p>You can search by keyword or by category. We have all types of articles for everyone
                     to enjoy!</p>
             </div>
@@ -65,7 +65,7 @@
 
             <form action="/searchByKeyword">
                 Search:
-                <input type="text" name="keyword">
+                <input id= "search-input" type="text" name="keyword">
                 <button>Search by Keyword</button>
             </form>
 
@@ -73,6 +73,7 @@
                 <select name="category">
                     <option value="kombucha">Kombucha</option>
                     <option value="gardening">Gardening</option>
+                    <option value="polls">Polls</option>
                 </select>
                 <button>Search by Category</button>
             </form>

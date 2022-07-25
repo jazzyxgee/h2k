@@ -56,7 +56,7 @@
         </div>
         <div class = "blog-heading">
             <div class = "b-text">
-                <h1>H2K Blog</h1>
+                <h1><a class = "h1-link"href="/blog" >H2K Blog</a></h1>
                 <p>You can search by keyword or by category. We have all types of articles for everyone
                     to enjoy!</p>
             </div>
@@ -68,9 +68,11 @@
                 <button>Search by Keyword</button>
             </form>
             <form action="/searchByCategory">
-                <select name="categoryId">
-                    <option value="1">Kombucha</option>
-                    <option value="2">Gardening</option>
+                <select name="category">
+                    <option value="kombucha">Kombucha</option>
+                
+                    <option value="gardening">Gardening</option>
+                    <option value="polls">Polls</option>
                 </select>
                 <button>Search by Category</button>
             </form>
@@ -95,7 +97,14 @@
                                 by <a href="javascript:void(0)" > <%= i.user %></a><br>
                                 <p><a href="javascript:void(0)" > <%= i.category %></a> - <%= i.date %></p>
                                 <br>
-                                <button>Read More</button>
+
+                                <form action="/post">
+                                    <select class = "postopt" name = "postId">
+                                        <option value = "<%= i.postId %>"><%= i.postId %></option>
+                                    </select>
+                                    <button>Read More</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>

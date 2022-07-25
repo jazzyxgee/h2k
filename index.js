@@ -32,7 +32,7 @@ app.get('/searchByKeyword', async (req, res) => {
     let userKeyword = req.query.keyword;
     console.log(userKeyword);
   
-    let sql = `SELECT title, user, category, date
+    let sql = `SELECT postId, title, user, category, date
               FROM blog_posts
               WHERE title LIKE ? `;
   
@@ -58,7 +58,7 @@ app.get('/searchByCategory', async (req, res) => {
     let userCategory = req.query.category;
     console.log(userCategory);
   
-    let sql = `SELECT title, user, category, date
+    let sql = `SELECT postId, title, user, category, date
               FROM blog_posts
               WHERE category LIKE ? `;
   
