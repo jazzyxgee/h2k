@@ -124,21 +124,25 @@ nav{
 .slideshow{
     background-color: #ffffff;
     grid-area: slideshow;
+    
 }
 .slideshow-display {
     position: relative;
     margin: auto;
+    
 }
 .slides{
     display: none;
-    height:700px;
+    height: 700px;
 }
 .slide-info{
-    height: 100%; /* You must set a specified height */          
+    min-height: 100%; /* You must set a specified height */          
 }
 .slide-info a{
-    position:absolute;                 
-    bottom:30px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+    padding-left: 30px;
 
     font-family: "Noticia Text", sans-serif;
     color:#fff;
@@ -221,6 +225,9 @@ main{
 }
 .main-text {
     width: 500px;
+}
+.main-text h1 {
+    
 }
 .main-text h4{
     font-size: 22px;
@@ -444,6 +451,24 @@ footer{
     .main-text {
         width: 100%;
         text-align: center;
+    }
+
+    .slideshow{
+        background-color: #ffffff;
+        grid-area: slideshow;
+        min-height: 93vh;
+    }
+    .slideshow-display {
+        position: relative;
+        margin: auto;
+        min-height: 93vh;
+    }
+    .slides{
+        display: none;
+        min-height: 93vh;
+    }
+    .dots{
+        display: none; 
     }
     nav{
         min-height: 80%;

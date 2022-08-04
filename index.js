@@ -20,7 +20,7 @@ app.get('/post', (req, res) =>  {
 })*/
 app.get('/blog', async (req, res) =>  {
     
-    let sql = `SELECT postId, title, user, category, date, himg, vimg
+    let sql = `SELECT postId, title, user, category, date, himg
                 FROM blog_posts`;
     let rows = await executeSQL(sql);
 
@@ -47,7 +47,9 @@ app.get('/post', async (req, res) => {
     let postId = req.query.postId;
     let sql = `SELECT *
               FROM blog_posts
-              WHERE postId = ? `;
+              INNER JOIN blog_assests
+              ON blog_posts.postId = blog_assests.postId
+              WHERE blog_posts.postId = ? `;
 
     let rows = await executeSQL(sql, [postId]);
     res.render("post", { "post": rows });
