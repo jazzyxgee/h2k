@@ -68,25 +68,19 @@
                 <article>
                     <div class = "intro">
                         <br>
-                        <h2>Explore your front or back yard...</h2>
-                        <p>We grew basil, jalapanoes, and got lucky with some berries. It's great to be suprised by your
-                            garden, especially when you need a pick me up. 
-                        </p>
-                        
+                        <h2><%= i.h2 %></h2>
+                        <p><%= i.pintro %></p>
+                        <br>
                     </div>
-                    <div>
-                        <br>
+                    <div >  
                         <p><%= i.post %></p>
-                        <br>
                     </div>
                     <div class = "spotlight-photo">
                         <img src="<%= i.img1 %>" alt="<%= i.img1 %>">
                         <figcaption> <%= i.img1cap %> </figcaption>
                     </div>
                     <div>
-                        <br>
                         <p><%= i.post2 %></p>
-                        <br>
                     </div>
                     <div class = "photo-grid">
                         <div class = "photo1">
@@ -103,11 +97,12 @@
                         </div>
                     </div>
                     <div>
-                        <br>
                         <p><%= i.post3 %></p>
                     </div>
+                    <div>
+                        <p><%= i.post4 %></p>
+                    </div>
                 </article>
-                
             </div> 
         </div>
         <% } %>

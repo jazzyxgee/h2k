@@ -79,6 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .hero{
     background-color: #eff9d9;
@@ -110,10 +111,11 @@ article{
     justify-content: center;
     flex-direction: column;
     width:70%;
-
+    
     line-height: 26pt;
 }
 article p{
+    
     font-size: 20px;
 }
 .intro {
@@ -125,13 +127,20 @@ article p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(251, 255, 250);
+    
+    
 }
 .spotlight-photo img{
+    display: block;
     width: 800px;
+    
+}
+.spotlight-photo {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .photo-grid{
-
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .1fr .1fr .1fr;
@@ -139,32 +148,37 @@ article p{
         "img2 img2"
         "img3 img4"
         "img5 img5";
-    grid-gap: 0.2rem;
+    grid-gap: 0.5rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
 }
 .photo1{
     grid-area: img2;
 }
 .photo1 img{
+    display: block;
     width: 800px;
 }
 .photo2{
     grid-area: img3;
 }
-.photo2 img {
-
-    width: 392px;
+.photo2 img{
+    display: block;
+    width: 396px;
 }
 .photo3{
-    text-align: right;
     grid-area: img4;
 }
-.photo3 img {
-    width: 392px;
+.photo3 img{
+    display: block;
+    width: 396px;
 }
 .photo4{
     grid-area: img5;
 }
-.photo4 img {
+.photo4 img{
+    display: block;
     width: 800px;
 }
 
