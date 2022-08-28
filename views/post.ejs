@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<% for (i of post) { %>
 <head>
     <meta charset="UTF-8">
-    <title>Hi! to Kombucha</title>
-    <meta name="description" content="Find articles and how-to guides about kombucha, gardening, and healthy foods
-    on Hi! to Kombucha.">
+    <title><%= i.metatitle %></title>
+    <meta name="description" content="<%= i.metadesc %>">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/blog.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +55,7 @@
         </div>
 
 
-        <% for (i of post) { %>
+        
         <div class = "posted">
             <div class="posted-container">
                 <div class = "hero" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(<%= i.himg %>)">
@@ -72,8 +71,8 @@
                         <p><%= i.pintro %></p>
                         <br>
                     </div>
-                    <div >  
-                        <p><%= i.post %></p>
+                    <div>  
+                        <p><%= i.post %> <a href="<%= i.link1 %>"><%= i.link1text %></a></p>
                     </div>
                     <div class = "spotlight-photo">
                         <img src="<%= i.img1 %>" alt="<%= i.img1 %>">
@@ -97,15 +96,34 @@
                         </div>
                     </div>
                     <div>
-                        <p><%= i.post3 %></p>
+                        <p><%= i.post3 %> <a href="<%= i.link2 %>"><%= i.link2text %></a></p>
                     </div>
                     <div>
-                        <p><%= i.post4 %></p>
+                        <p><%= i.post4 %> </p>
+                        <br>
+                    </div>
+                   
+                    <h2>Other articles...</h2>
+                    <div class="related-grid">
+                        <div class="related-post">
+                            <img src="https://raw.githubusercontent.com/jazzyxgee/h2k/main/public/img/what-is-kombucha-cover.jpg" width="185px">
+                            <h4><a href="https://hitokombucha.herokuapp.com/post?postId=3">What is Kombucha?</a></h4>
+                            <div><br></div>
+                        </div>
+                        <div class="related-post">
+                            <img src="https://raw.githubusercontent.com/jazzyxgee/h2k/main/public/img/may-whats-growing.jpg" width="185px">
+                            <h4><a href="https://hitokombucha.herokuapp.com/post?postId=1">What's Growing in the Garden?</a></h4>
+
+                        </div>
+                        <div class="related-post">
+                            <img src="https://raw.githubusercontent.com/jazzyxgee/h2k/main/public/img/poll-cover.jpg" width="185px">
+                            <h4><a href="https://hitokombucha.herokuapp.com/post?postId=2">Poll: What would you like to learn about?</a></h4> 
+                        </div>
                     </div>
                 </article>
             </div> 
         </div>
-        <% } %>
+<% } %>
 
 
         <footer>
