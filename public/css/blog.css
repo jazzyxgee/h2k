@@ -128,17 +128,22 @@ article p{
     justify-content: center;
     flex-direction: column;
 }
+.posted-container a {
+    color:#000;
+}
+.posted-container a:hover {
+    color:#000;
+    text-decoration: none;
+}
 .spotlight-photo img{
     display: block;
     width: 800px;
-    
 }
 .spotlight-photo {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 .photo-grid{
-    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .1fr .1fr .1fr;
@@ -149,7 +154,6 @@ article p{
     grid-gap: 0.5rem;
     padding-top: 25px;
     padding-bottom: 25px;
-    
 }
 .photo1{
     grid-area: img2;
