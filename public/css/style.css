@@ -268,14 +268,14 @@ main{
 .br-posts a:hover{
     text-decoration: underline;
 }
-.br-posts button {
+.m-btn {
     background-color: #fff;
     border: 2px solid #eaeaea;
     height: 50px;
     width: 180px;
     font-size: 20px;
 }
-.br-posts button:hover {
+.m-btn:hover {
     background-color: #000;
     color: #fff;
     border: 2px solid #ffffff;
