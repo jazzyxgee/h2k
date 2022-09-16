@@ -94,14 +94,9 @@
                                 by <a href="javascript:void(0)" > <%= i.user %></a><br>
                                 <p><a href="javascript:void(0)" > <%= i.category %></a> - <%= i.date %> </p>
                                 <br>
-                            
-                                <form action="/post">
-                                    <select class = "postopt" name = "postId">
-                                        <option value = "<%= i.postId %>"><%= i.postId %></option>
-                                    </select>
-                                    <button>Read More</button>
-                                </form>
-                                
+
+                                <a href='/post/<%= i.postId %>/<%= i.slug %>'><button class="m-btn">Read More</button></a>
+
                             </div>
                         </div>
                     </div>

@@ -23,7 +23,7 @@ app.get('/post', (req, res) =>  {
 })*/
 app.get('/blog', async (req, res) =>  {
     
-    let sql = `SELECT postId, title, user, category, date, himg
+    let sql = `SELECT postId, title, user, category, date, himg, slug
                 FROM blog_posts`;
     let rows = await executeSQL(sql);
 
@@ -35,7 +35,7 @@ app.get('/searchByKeyword', async (req, res) => {
     let userKeyword = req.query.keyword;
     console.log(userKeyword);
   
-    let sql = `SELECT postId, title, user, category, date, vimg
+    let sql = `SELECT postId, title, user, category, date, vimg, slug
               FROM blog_posts
               WHERE title LIKE ? `;
   
@@ -45,9 +45,27 @@ app.get('/searchByKeyword', async (req, res) => {
     res.render("results", { "posts": rows });
   
 });
+/*
 app.get('/post', async (req, res) => {
 
     let postId = req.query.postId;
+    
+    let sql = `SELECT *
+              FROM blog_posts
+              INNER JOIN blog_assets
+              ON blog_posts.postId = blog_assets.postId
+              WHERE blog_posts.postId = ? `;
+
+    let rows = await executeSQL(sql, [postId]);
+    res.render("post", { "post": rows });
+  
+});*/
+app.get('/post/:id/:slug', async (req, res) => {
+
+    let postId = req.params.id;
+    let slug =  req.params.slug;
+    console.log(slug)
+
     let sql = `SELECT *
               FROM blog_posts
               INNER JOIN blog_assets
@@ -63,7 +81,7 @@ app.get('/searchByCategory', async (req, res) => {
     let userCategory = req.query.category;
     console.log(userCategory);
   
-    let sql = `SELECT postId, title, user, category, date, vimg
+    let sql = `SELECT postId, title, user, category, date, vimg, slug
               FROM blog_posts
               WHERE category LIKE ? `;
   
