@@ -87,7 +87,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 93VH;
+    min-height: 100VH;
 }
 .description{
     position: absolute;
