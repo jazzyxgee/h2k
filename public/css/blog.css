@@ -19,7 +19,21 @@
     /*background-color: #d1cdb4;*/
     height: 50px;
 }
-
+.search-zone button {
+    background-color: #fff;
+    border: 2px solid #989898;
+    height: 22px;
+}
+.search-zone button:hover {
+    background-color: rgb(228, 228, 228);
+    border: 2px solid #989898;
+    height: 22px;
+}
+.search-zone select {
+    background-color: #fff;
+   
+    height: 24px;
+}
 .posts-results{
     display: flex;
     align-items: center;
