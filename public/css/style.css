@@ -490,11 +490,11 @@ footer{
     .slideshow-display {
         position: relative;
         margin: auto;
-        min-height: 90vh;
+        height: 88vh;
     }
     .slides{
         display: none;
-        height: 92vh;
+        min-height: 92vh;
     }
     .dots{
         display: none; 
