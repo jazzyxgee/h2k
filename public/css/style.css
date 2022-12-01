@@ -482,20 +482,19 @@ footer{
         width: 100%;
         text-align: center;
     }
-
     .slideshow{
         background-color: #ffffff;
         grid-area: slideshow;
-        min-height: 93vh;
+        min-height: 100vh;
     }
     .slideshow-display {
         position: relative;
         margin: auto;
-        min-height: 93vh;
+        min-height: 90vh;
     }
     .slides{
         display: none;
-        min-height: 93vh;
+        height: 92vh;
     }
     .dots{
         display: none; 
